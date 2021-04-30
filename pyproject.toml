@@ -1,12 +1,14 @@
 [tool.poetry]
 name = "niteru"
 version = "0.1.0"
-description = "'A set of similarity metrics to compare html files"
+description = "A set of similarity metrics to compare html files"
 authors = ["Manabu Niseki <manabu.niseki@gmail.com>"]
+homepage = "https://github.com/ninoseki/niteru"
+repository = "https://github.com/ninoseki/niteru"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
