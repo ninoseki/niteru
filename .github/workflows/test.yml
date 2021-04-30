@@ -27,7 +27,7 @@ jobs:
           poetry install
 
       - name: Run tests
-        run: pytest -v --cov=niteru --cov-report=term-missing
+        run: poetry run pytest -v --cov=niteru --cov-report=term-missing
 
       - name: Coveralls
         env:
