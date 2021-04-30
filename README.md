@@ -1,5 +1,9 @@
 # niteru
 
+[![PyPI version](https://badge.fury.io/py/niteru.svg)](https://badge.fury.io/py/niteru)
+[![Python CI](https://github.com/ninoseki/niteru/actions/workflows/test.yml/badge.svg)](https://github.com/ninoseki/niteru/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ninoseki/niteru/badge.svg?branch=main)](https://coveralls.io/github/ninoseki/niteru?branch=main)
+
 This package provides a set of functions to measure the similarity between HTMLs.
 
 **Note**: This is a fork of [html-similarity](https://github.com/matiskay/html-similarity).
