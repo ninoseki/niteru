@@ -18,3 +18,4 @@ html2 = """
 
 def test_structural_similarity():
     assert structural_similarity(html1, html2) > 0.85
+    assert structural_similarity(html1, html2, use_quick_ratio=True) > 0.85

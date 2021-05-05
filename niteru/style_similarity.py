@@ -24,7 +24,7 @@ def style_similarity(html1: str, html2: str) -> float:
         html2 (str): HTML string
 
     Returns:
-        float: similarity
+        float: Similarity as a float in the range 0.0 to 1.0.
     """
     try:
         parsed1 = parse_html(html1)
