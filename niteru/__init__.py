@@ -1,3 +1,6 @@
+"""
+.. include:: ../README.md
+"""
 from niteru.similarity import similarity
 from niteru.structural_similarity import structural_similarity
 from niteru.style_similarity import style_similarity
