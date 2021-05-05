@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "niteru"
-version = "0.1.0"
+version = "0.1.1"
 description = "A set of similarity metrics to compare html files"
 authors = ["Manabu Niseki <manabu.niseki@gmail.com>"]
 homepage = "https://github.com/ninoseki/niteru"
