@@ -23,8 +23,11 @@ class NiteruHTMLParser(HTMLParser):
     def handle_comment(self, _: str) -> None:
         self.tags.append("comment")
 
+    def handle_decl(self, decl: str) -> None:
+        self.tags.append("declaration")
 
-@lru_cache
+
+@lru_cache(maxsize=128)
 def _parse_html(html: str):
     parser = NiteruHTMLParser()
     parser.feed(html)
