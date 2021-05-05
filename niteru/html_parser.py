@@ -27,7 +27,7 @@ class NiteruHTMLParser(HTMLParser):
         self.tags.append("declaration")
 
 
-@lru_cache
+@lru_cache(maxsize=128)
 def _parse_html(html: str):
     parser = NiteruHTMLParser()
     parser.feed(html)
