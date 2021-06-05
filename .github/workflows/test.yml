@@ -1,6 +1,6 @@
 name: Python CI
 
-on: ["pull_request"]
+on: ["pull_request", "push"]
 
 jobs:
   test:
@@ -32,8 +32,8 @@ jobs:
       - name: Coveralls
         env:
           COVERALLS_PARALLEL: true
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: poetry run coveralls
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: poetry run coveralls --service=github
 
   coveralls:
     name: Indicate completion to coveralls.io
