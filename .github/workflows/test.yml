@@ -33,7 +33,7 @@ jobs:
         env:
           COVERALLS_PARALLEL: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: poetry run coveralls
+        run: poetry run coveralls --service=github
 
   coveralls:
     name: Indicate completion to coveralls.io
