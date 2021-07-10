@@ -16,8 +16,21 @@ def jaccard_similarity(classes1: List[str], classes2: List[str]) -> float:
     return intersection / max(denominator, 0.000001)
 
 
-def style_similarity(html1: str, html2: str) -> float:
+def style_similarity_by_classes(classes1: List[str], classes2: List[str]) -> float:
     """Computes CSS style similarity between two DOM trees
+
+    Args:
+        classes1 (List[str]): HTML DOM classes
+        classes2 (List[str]): HTML DOM classes
+
+    Returns:
+        float: Similarity as a float in the range 0.0 to 1.0.
+    """
+    return jaccard_similarity(classes1, classes2)
+
+
+def style_similarity(html1: str, html2: str) -> float:
+    """Computes CSS style similarity between two DOM trees from HTMLs
 
     Args:
         html1 (str): HTML string
@@ -36,6 +49,4 @@ def style_similarity(html1: str, html2: str) -> float:
     if not is_html(parsed1) or not is_html(parsed2):
         return 0.0
 
-    classes1 = parsed1.classes
-    classes2 = parsed2.classes
-    return jaccard_similarity(classes1, classes2)
+    return style_similarity_by_classes(parsed1.classes, parsed2.classes)
