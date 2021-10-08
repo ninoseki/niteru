@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "niteru"
-version = "0.2.0"
+version = "0.2.1"
 description = "A set of similarity metrics to compare html files"
 authors = ["Manabu Niseki <manabu.niseki@gmail.com>"]
 homepage = "https://github.com/ninoseki/niteru"
@@ -9,23 +9,23 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-poetry-version = "^0.1.5"
+importlib-metadata = {version = "^4.8", python = "<3.8"}
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
 autopep8 = "^1.5.7"
-black = "^21.6b0"
-coveralls = "^3.1.0"
+black = "^21.9b0"
+coveralls = "^3.2.0"
 flake8 = "^3.9.2"
-isort = "^5.9.2"
+isort = "^5.9.3"
 mypy = "^0.910"
-pre-commit = "^2.13.0"
-pytest = "^6.2.4"
-pytest-cov = "^2.12.1"
+pre-commit = "^2.15.0"
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
 pytest-mock = "^3.6.1"
-pytest-randomly = "^3.8.0"
+pytest-randomly = "^3.10.1"
 pytest-sugar = "^0.9.4"
-pyupgrade = "^2.21.0"
+pyupgrade = "^2.29.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
